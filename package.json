@@ -1,12 +1,11 @@
 {
-  "name": "Elm-template",
+  "name": "Elm Template",
   "version": "1.0.0",
   "description": "Elm template",
   "scripts": {
-    "test": "elm-test",
-    "watch": "parcel watch -t node --bundle-node-modules src/index.ts",
-    "start": "node ./dist/index.js",
-    "build": "parcel build -t node --bundle-node-modules src/index.ts"
+    "build": "node ./build.js",
+    "watch": "node ./build.js --watch",
+    "start": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "uzimaru0000",
@@ -16,8 +15,8 @@
     "@types/prompts": "^2.0.3",
     "@types/readline-sync": "^1.4.3",
     "elm-hot": "^1.1.4",
+    "esbuild-plugin-elm": "^0.0.11-1",
     "node-elm-compiler": "^5.0.4",
-    "parcel": "^1.12.4",
     "typescript": "^3.7.2"
   },
   "dependencies": {

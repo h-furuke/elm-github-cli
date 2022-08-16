@@ -1,14 +1,14 @@
 // @ts-ignore
-global.XMLHttpRequest = require('xhr2');
+global.XMLHttpRequest = require("xhr2");
 
-import { Elm } from './Elm/Main.elm';
-import prompts from 'prompts';
+import { Elm } from "./Elm/Main.elm";
+import prompts from "prompts";
 
 const args = process.argv.slice(2).join();
 
 const app = Elm.Main.init({ flags: args });
 
-app.ports.output.subscribe(async opts => {
+app.ports.output.subscribe(async (opts) => {
   try {
     const { value } = await prompts(opts);
     if (value === undefined) {
